@@ -4,4 +4,5 @@ const getAll = (require, response) => {
 
 module.exports = {
     getAll
+    
 };
