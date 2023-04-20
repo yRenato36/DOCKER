@@ -2,8 +2,11 @@
 
 const mysql = require('mysql2/promise');
 
+require('dotenv').config();
+
 /* string de conexão - contém todas as informações de conexão com o banco de dados
 as informações estão armazenadas como variáveis de ambiente */
+
 const connection = mysql.createPool({
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,

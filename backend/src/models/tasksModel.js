@@ -4,7 +4,8 @@ const connection = require('./connection');
 
 // retorna todas as tasks do banco de dados
 const getAll = async () => {
-    const tasks = await connection.execute('SELECT * FROM tasks'); //método execute, espera executar um query de SQL
+    //[tasks] = array destruction, pegando a primeira posição do array que é retornado do getAll e armazenando em tasks
+    const [tasks] = await connection.execute('SELECT * FROM tasks'); //método execute, espera executar um query de SQL
     return tasks;
 }; 
 
