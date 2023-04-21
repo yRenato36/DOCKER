@@ -4,6 +4,6 @@ const tasksController = require('./controllers/tasksController'); // importando 
 //router.get('/tasks', (request, response) => response.status(200).send('Running the router'))
 const router = express.Router();
 router.get('/tasks', tasksController.getAll);
-
+router.post('/tasks', tasksController.createTask);
  
 module.exports = router;
