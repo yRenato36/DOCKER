@@ -22,12 +22,28 @@ const createTask = async (task) => {
     
     // []: recebe o primeiro array, tal qual contém as informações do banco de dados
     const [createTask] = await connection.execute(query, [title, 'pendente', dateUTC]); // esse array irá preencher as interrogações na variável query
-
     return {insertId: createTask.insertId}; // retorna o Id que foi inserido no banco de dados
+}
+
+const deleteTask = async (id) => {
+    // executa a query SQL que deleta a task no id fornecido
+    const [removedTask] = await connection.execute("DELETE FROM tasks WHERE id = ?", [id]); 
+    return removedTask;
+};
+
+// é informado o id e os dados dessa task para fazer o update 
+const updateTask = async (id, task) => {
+    const { title, status } = task ; // recorta o 'title' e o 'status' do objetivo task
+     
+    const query = 'UPDATE tasks SET title = ?, status = ? WHERE id = ?';
+    const [updatedTask] = await connection.execute(query, [title, status, id]);
+    //return updatedTask;
 }
 
 // exportando um objeto que contém todas as funções
 module.exports = {
     getAll,
     createTask,
+    deleteTask,
+    updateTask
 };
