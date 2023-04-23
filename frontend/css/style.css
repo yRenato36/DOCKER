@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,400&display=swap'); /*open sans*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(82, 143, 197);
+}
+
+main {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    margin: 40px auto; /*valor1: em cima e em baixo -- valor2: direita e esquerda*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-form {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 15px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    flex: 1; /*permite que o input utilize 100% do espaço disponível para ele*/
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none; /*linha indicando quando selecionado*/
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    background-color: rgb(82, 143, 197);
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    padding: 10px 15px; /*tamanho da borda (em cima e em baixo - direita e esquerda)*/
+    border: 1px solid #a7a7a7; /*cria a grade (coloca borda em cada elemento)*/
+    text-align: center;
+}
+
+td {
+    color: #333;
+    font-weight: 600;
+}
+
+tr:nth-child(even) /*busca os elemento pares para aplicar o estilo*/{
+    background-color: #f0f0f0;
+}
+
+select {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #ddd;
+}
+
+select:hover {
+    background-color: #a5c6ff;
+}
+
+.btn-action {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-action:nth-child(1) { /*seleciona o 1º dessa classe e aplica os estilos*/
+    background-color: rgb(255, 187, 60);
+    margin-right: 5px;
+}
+
+.btn-action:nth-child(2) { /*seleciona o 1º dessa classe e aplica os estilos*/
+    background-color: rgb(255, 83, 83);
+}

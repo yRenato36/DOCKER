@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    
+    <title>to-do-listApp</title>
+</head>
+<body>
+    
+    <main>
+        <form class="add-form"> 
+            <input type="text" placeholder="Adicionar tarefa" class="input-task">
+            <button type="submit">+</button>
+        </form>
+        <table>
+            <thead> <!-- table head(colunas - cabeçalho da tabela)-->
+                <tr>
+                    <th>Tarefa</th> <!-- cada um representa um coluna da tabela-->
+                    <th>Criada em:</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            
+            <tbody> <!-- corpo da tabela(linhas)-->
+                <tr>
+                    <td>Tarefa HTML</td> <!-- cada um representa uma linha da coluna-->
+                    <td>10 de janeiro de 2023 11:00</td>
+                    <td>
+                        <select> <!-- opções de status da tafera-->
+                            <option value="pendente">Pendente</option>
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Concluída">Concluída</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn-action"> <!-- button de edit-->
+                            <span class="material-symbols-rounded">edit_note</span> 
+                        </button>
+                        <button class="btn-action"> <!-- button de delete-->
+                            <span class="material-symbols-rounded">delete</span>
+                        </button>
+                    </td>
+                </tr>             
+            </tbody>
+        
+        </table>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
